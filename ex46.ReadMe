@@ -4,6 +4,9 @@ something. Here you an follow the new method.
 This link explain why it happens and how tofix it. https://forum.learncodethehardway.com/t/ex46-nosetests-error/5683
 
 And I make an example of "Creating virtual environment". Enjoy your  Python hard way!
+=============================================================================================
+
+
 
 PS C:\Users\zheng> cd ~
 PS C:\Users\zheng> python
@@ -251,3 +254,23 @@ Ran 0 tests in 0.016s
 
 OK
 (lphw) PS C:\Users\zheng\PycharmProjects\lphw\skeleton>
+
+###### To solve this refrence to the discussion ######
+https://forum.learncodethehardway.com/t/ex46-nosetests-ran-0-tests-or-ran-1-tests-with-error/3869/7
+"I ran nosetests again, fail. Than i move Name_tests.py out of \tests, directly under \skeleton, this time nosetests succeed."
+=======================================================
+
+(lphw) PS C:\Users\zheng\PycharmProjects\lphw\skeleton> nosetests .\tests\NAME_tests.py
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+OK
+(lphw) PS C:\Users\zheng\PycharmProjects\lphw\skeleton> cd ..
+(lphw) PS C:\Users\zheng\PycharmProjects\lphw> nosetests-3.11.exe .\simplegame\tests\game_tests.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+(lphw) PS C:\Users\zheng\PycharmProjects\lphw>
