@@ -4,69 +4,34 @@ something. Here you an follow the new method.
 This link explain why it happens and how tofix it. https://forum.learncodethehardway.com/t/ex46-nosetests-error/5683
 
 And I make an example of "Creating virtual environment". Enjoy your  Python hard way!
-=============================================================================================
+================================================================================
 
 
-
-PS C:\Users\zheng> cd ~
-PS C:\Users\zheng> python
-Python 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>> quit()
-PS C:\Users\zheng> pip list
-Package                       Version
------------------------------ ---------
-2to3                          1.0
-alabaster                     0.7.13
-Babel                         2.12.1
-certifi                       2023.7.22
-charset-normalizer            3.2.0
-colorama                      0.4.6
-coverage                      7.2.7
-distlib                       0.3.7
-docutils                      0.20.1
-filelock                      3.12.2
-idna                          3.4
-imagesize                     1.4.1
-iniconfig                     2.0.0
-Jinja2                        3.1.2
-MarkupSafe                    2.1.3
-nose-py3                      1.6.2
-numpy                         1.25.1
-packaging                     23.1
-pip                           23.2.1
-platformdirs                  3.10.0
-pluggy                        1.2.0
-Pygments                      2.15.1
-pytest                        7.4.0
-requests                      2.31.0
-six                           1.16.0
-snowballstemmer               2.2.0
-Sphinx                        7.1.1
-sphinxcontrib-applehelp       1.0.4
-sphinxcontrib-devhelp         1.0.2
-sphinxcontrib-htmlhelp        2.0.1
-sphinxcontrib-jsmath          1.0.1
-sphinxcontrib-qthelp          1.0.3
-sphinxcontrib-serializinghtml 1.1.5
-urllib3                       2.0.4
-virtualenv                    20.24.2
-PS C:\Users\zheng> pip install virtualenv
-Requirement already satisfied: virtualenv in c:\users\zheng\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (20.24.2)
-Requirement already satisfied: distlib<1,>=0.3.7 in c:\users\zheng\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from virtualenv) (0.3.7)
-Requirement already satisfied: filelock<4,>=3.12.2 in c:\users\zheng\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from virtualenv) (3.12.2)
-Requirement already satisfied: platformdirs<4,>=3.9.1 in c:\users\zheng\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from virtualenv) (3.10.0)
 PS C:\Users\zheng>
-PS C:\Users\zheng> python -m venv .\PycharmProjects\lphw\
 PS C:\Users\zheng>
-PS C:\Users\zheng> PycharmProjects\lphw\Scripts\activate.ps1
-(lphw) PS C:\Users\zheng> pip list
-Package    Version
----------- -------
-nose       1.3.7
-pip        23.2.1
-setuptools 65.5.0
-(lphw) PS C:\Users\zheng> pip uninstall nose
+PS C:\Users\zheng>
+PS C:\Users\zheng> python -m venv .\PycharmProjects\lphw\venv
+PS C:\Users\zheng> ls .\PycharmProjects\lphw\venv\Scripts\
+
+
+    目录: C:\Users\zheng\PycharmProjects\lphw\venv\Scripts
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         2023/7/31     22:44           2080 activate
+-a----         2023/7/31     22:44           1009 activate.bat
+-a----         2023/7/31     22:44          26199 Activate.ps1
+-a----         2023/7/31     22:44            393 deactivate.bat
+-a----         2023/7/31     22:44         108418 pip.exe
+-a----         2023/7/31     22:44         108418 pip3.11.exe
+-a----         2023/7/31     22:44         108418 pip3.exe
+-a----         2023/7/31     22:44         270608 python.exe
+-a----         2023/7/31     22:44         259352 pythonw.exe
+
+
+PS C:\Users\zheng> .\PycharmProjects\lphw\venv\Scripts\Activate.ps1
+(venv) PS C:\Users\zheng> pip uninstall nose
 Found existing installation: nose 1.3.7
 Uninstalling nose-1.3.7:
   Would remove:
@@ -77,7 +42,25 @@ Uninstalling nose-1.3.7:
     c:\users\zheng\pycharmprojects\lphw\scripts\nosetests.exe
 Proceed (Y/n)? y
   Successfully uninstalled nose-1.3.7
-(lphw) PS C:\Users\zheng> pip install nose-py3
+(venv) PS C:\Users\zheng> pip list
+Package    Version
+---------- -------
+pip        23.1.2
+setuptools 65.5.0
+
+[notice] A new release of pip is available: 23.1.2 -> 23.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(venv) PS C:\Users\zheng> python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\zheng\pycharmprojects\lphw\venv\lib\site-packages (23.1.2)
+Collecting pip
+  Using cached pip-23.2.1-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.1.2
+    Uninstalling pip-23.1.2:
+      Successfully uninstalled pip-23.1.2
+Successfully installed pip-23.2.1
+(venv) PS C:\Users\zheng> pip install nose-py3
 Collecting nose-py3
   Obtaining dependency information for nose-py3 from https://files.pythonhosted.org/packages/fe/85/f431f78a37e88d71edd3841c2dc94c8daba10d744949103f0bcbc26ad98f/nose_py3-1.6.2-py3-none-any.whl.metadata
   Using cached nose_py3-1.6.2-py3-none-any.whl.metadata (2.0 kB)
@@ -154,7 +137,7 @@ Using cached MarkupSafe-2.1.3-cp311-cp311-win_amd64.whl (17 kB)
 Using cached urllib3-2.0.4-py3-none-any.whl (123 kB)
 Installing collected packages: snowballstemmer, 2to3, urllib3, sphinxcontrib-serializinghtml, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, six, Pygments, packaging, numpy, MarkupSafe, imagesize, idna, docutils, coverage, colorama, charset-normalizer, certifi, babel, alabaster, requests, Jinja2, sphinx, nose-py3
 Successfully installed 2to3-1.0 Jinja2-3.1.2 MarkupSafe-2.1.3 Pygments-2.15.1 alabaster-0.7.13 babel-2.12.1 certifi-2023.7.22 charset-normalizer-3.2.0 colorama-0.4.6 coverage-7.2.7 docutils-0.20.1 idna-3.4 imagesize-1.4.1 nose-py3-1.6.2 numpy-1.25.1 packaging-23.1 requests-2.31.0 six-1.16.0 snowballstemmer-2.2.0 sphinx-7.1.1 sphinxcontrib-applehelp-1.0.4 sphinxcontrib-devhelp-1.0.2 sphinxcontrib-htmlhelp-2.0.1 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.3 sphinxcontrib-serializinghtml-1.1.5 urllib3-2.0.4
-(lphw) PS C:\Users\zheng> pip list
+(venv) PS C:\Users\zheng> pip list
 Package                       Version
 ----------------------------- ---------
 2to3                          1.0
@@ -186,22 +169,22 @@ sphinxcontrib-jsmath          1.0.1
 sphinxcontrib-qthelp          1.0.3
 sphinxcontrib-serializinghtml 1.1.5
 urllib3                       2.0.4
-(lphw) PS C:\Users\zheng> pip install pytest
+(venv) PS C:\Users\zheng> pip install pytest
 Collecting pytest
   Obtaining dependency information for pytest from https://files.pythonhosted.org/packages/33/b2/741130cbcf2bbfa852ed95a60dc311c9e232c7ed25bac3d9b8880a8df4ae/pytest-7.4.0-py3-none-any.whl.metadata
   Using cached pytest-7.4.0-py3-none-any.whl.metadata (8.0 kB)
 Collecting iniconfig (from pytest)
   Using cached iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
-Requirement already satisfied: packaging in c:\users\zheng\pycharmprojects\lphw\lib\site-packages (from pytest) (23.1)
+Requirement already satisfied: packaging in c:\users\zheng\pycharmprojects\lphw\venv\lib\site-packages (from pytest) (23.1)
 Collecting pluggy<2.0,>=0.12 (from pytest)
   Obtaining dependency information for pluggy<2.0,>=0.12 from https://files.pythonhosted.org/packages/51/32/4a79112b8b87b21450b066e102d6608907f4c885ed7b04c3fdb085d4d6ae/pluggy-1.2.0-py3-none-any.whl.metadata
   Using cached pluggy-1.2.0-py3-none-any.whl.metadata (4.4 kB)
-Requirement already satisfied: colorama in c:\users\zheng\pycharmprojects\lphw\lib\site-packages (from pytest) (0.4.6)
+Requirement already satisfied: colorama in c:\users\zheng\pycharmprojects\lphw\venv\lib\site-packages (from pytest) (0.4.6)
 Using cached pytest-7.4.0-py3-none-any.whl (323 kB)
 Using cached pluggy-1.2.0-py3-none-any.whl (17 kB)
 Installing collected packages: pluggy, iniconfig, pytest
 Successfully installed iniconfig-2.0.0 pluggy-1.2.0 pytest-7.4.0
-(lphw) PS C:\Users\zheng> ls
+(venv) PS C:\Users\zheng> ls
 
 
     目录: C:\Users\zheng
@@ -230,8 +213,8 @@ d-r---          2023/7/5     16:39                Searches
 d-r---          2023/7/5     17:49                Videos
 
 
-(lphw) PS C:\Users\zheng> cd .\PycharmProjects\lphw\skeleton\
-(lphw) PS C:\Users\zheng\PycharmProjects\lphw\skeleton> ls
+(venv) PS C:\Users\zheng> cd .\PycharmProjects\lphw\skeleton\
+(venv) PS C:\Users\zheng\PycharmProjects\lphw\skeleton> ls
 
 
     目录: C:\Users\zheng\PycharmProjects\lphw\skeleton
@@ -247,30 +230,27 @@ d-----         2023/7/31     21:05                tests
 -a----         2023/7/30     21:05            439 setup.py
 
 
-(lphw) PS C:\Users\zheng\PycharmProjects\lphw\skeleton> nosetests-3.11.exe
+(venv) PS C:\Users\zheng\PycharmProjects\lphw\skeleton> nosetests-3.11.exe
 
 ----------------------------------------------------------------------
 Ran 0 tests in 0.016s
 
 OK
-(lphw) PS C:\Users\zheng\PycharmProjects\lphw\skeleton>
+(venv) PS C:\Users\zheng\PycharmProjects\lphw\skeleton>
+
+
 
 ###### To solve this refrence to the discussion ######
 https://forum.learncodethehardway.com/t/ex46-nosetests-ran-0-tests-or-ran-1-tests-with-error/3869/7
 "I ran nosetests again, fail. Than i move Name_tests.py out of \tests, directly under \skeleton, this time nosetests succeed."
 =======================================================
 
-(lphw) PS C:\Users\zheng\PycharmProjects\lphw\skeleton> nosetests .\tests\NAME_tests.py
+
+
+(venv) PS C:\Users\zheng\PycharmProjects\lphw\skeleton> nosetests-3.11.exe .\tests\NAME_tests.py
 .
 ----------------------------------------------------------------------
-Ran 1 test in 0.016s
+Ran 1 test in 0.000s
 
 OK
-(lphw) PS C:\Users\zheng\PycharmProjects\lphw\skeleton> cd ..
-(lphw) PS C:\Users\zheng\PycharmProjects\lphw> nosetests-3.11.exe .\simplegame\tests\game_tests.py
-...
-----------------------------------------------------------------------
-Ran 3 tests in 0.000s
-
-OK
-(lphw) PS C:\Users\zheng\PycharmProjects\lphw>
+(venv) PS C:\Users\zheng\PycharmProjects\lphw\skeleton>
