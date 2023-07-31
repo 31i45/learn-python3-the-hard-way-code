@@ -1,6 +1,10 @@
 Since it's Python 3.11.4 now, the way to create virtual environment would no longer work and cuase error like "Atttribute not callable" 
 something. Here you an follow the new method.
 
+This link explain why it happens and how tofix it. https://forum.learncodethehardway.com/t/ex46-nosetests-error/5683
+
+And I make an example of "Creating virtual environment". Enjoy your  Python hard way!
+
 PS C:\Users\zheng> cd ~
 PS C:\Users\zheng> python
 Python 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)] on win32
